@@ -104,6 +104,23 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
   a{color:inherit;text-decoration:none}
   section{padding:20px 0;break-inside:avoid-page}
 }
+
+/* Contacts */
+.mail{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin:0 0 8px}
+.mail a.addr{font:600 clamp(1.25rem,3.6vw,1.75rem)/1.2 var(--serif);text-decoration:none;border-bottom:2px solid var(--accent);overflow-wrap:anywhere}
+.mail a.addr:hover{opacity:.85}
+.copy{font:500 .9rem var(--sans);color:var(--accent);background:none;border:1px solid var(--line);border-radius:6px;padding:6px 14px;cursor:pointer}
+.copy:hover{border-color:var(--accent)}
+.copy:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.reply{margin:0 0 28px;color:var(--muted);font-size:.95rem}
+.text h3.sub{margin:32px 0 12px}
+.offices{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;max-width:68ch;margin:0 0 8px}
+.office{margin:0;padding-left:16px;border-left:2px solid var(--line);font-style:normal}
+.office strong{font:600 1.05rem var(--serif);display:block}
+.office span{display:block;color:var(--muted)}
+.office a{display:inline-block;margin-top:6px;font-size:.95rem}
+.social{margin:32px 0 0!important;color:var(--muted)}
+@media print{.copy{display:none}}
 </style>
 </head>
 <body id="top">
@@ -399,19 +416,40 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
   <section id="contacts">
     <h2>Contacts</h2>
     <div class="text">
-      <p>You can contact me for:</p>
-      <ul class="reasons">
+      <p>The best way to reach me is by e-mail.</p>
+      <div class="mail">
+        <a class="addr" href="mailto:Joao.Pedro.Pavia@iscte-iul.pt">Joao.Pedro.Pavia@iscte-iul.pt</a>
+        <button class="copy" type="button" data-copy="Joao.Pedro.Pavia@iscte-iul.pt" aria-live="polite">Copy address</button>
+      </div>
+
+      <h3 class="sub">You can write to me about</h3>
+      <ul class="tags">
         <li>Research projects</li>
         <li>Project collaborations</li>
         <li>Knowledge solicitations</li>
         <li>Reference solicitations</li>
         <li>Getting back in contact</li>
       </ul>
-      <p>My e-mail address is:</p>
-      <p><a href="mailto:Joao.Pedro.Pavia@iscte-iul.pt">Joao.Pedro.Pavia@iscte-iul.pt</a></p>
-      <p><strong>Iscte Sintra</strong><br>Escola de Tecnologias Digitais Aplicadas<br>Av. Heliodoro Salgado 3, 2710-569 Sintra, Portugal</p>
-      <p><strong>Iscte Lisboa</strong><br>Iscte – Instituto Universitário de Lisboa<br>Av. das Forças Armadas, 1649-026 Lisboa, Portugal</p>
-      <p>Let us connect on <a href="https://pt.linkedin.com/in/joaopedropavia">LinkedIn</a>.</p>
+
+      <h3 class="sub">Where to find me</h3>
+      <div class="offices">
+        <address class="office">
+          <strong>Iscte Sintra</strong>
+          <span>Escola de Tecnologias Digitais Aplicadas</span>
+          <span>Av. Heliodoro Salgado 3</span>
+          <span>2710-569 Sintra, Portugal</span>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Heliodoro+Salgado+3%2C+2710-569+Sintra%2C+Portugal">Open in Maps<span class="sr" style="position:absolute;left:-999px"> (Iscte Sintra)</span></a>
+        </address>
+        <address class="office">
+          <strong>Iscte Lisboa</strong>
+          <span>Iscte – Instituto Universitário de Lisboa</span>
+          <span>Av. das Forças Armadas</span>
+          <span>1649-026 Lisboa, Portugal</span>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Av.+das+For%C3%A7as+Armadas%2C+1649-026+Lisboa%2C+Portugal">Open in Maps<span class="sr" style="position:absolute;left:-999px"> (Iscte Lisboa)</span></a>
+        </address>
+      </div>
+
+      <p class="social">Prefer a message? Connect with me on <a href="https://pt.linkedin.com/in/joaopedropavia">LinkedIn</a>, or find my publications and identifiers under <a href="#profiles">Profiles</a>.</p>
     </div>
   </section>
 </main>
@@ -432,6 +470,20 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
     });
   },{rootMargin:'-30% 0px -65% 0px'});
   document.querySelectorAll('main section[id]').forEach(function(sec){ io.observe(sec); });
+})();
+
+(function(){
+  var b=document.querySelector('.copy'); if(!b) return;
+  var t;
+  b.addEventListener('click',function(){
+    var v=b.getAttribute('data-copy'), done=function(ok){
+      b.textContent= ok ? 'Copied' : 'Press Ctrl+C to copy';
+      clearTimeout(t); t=setTimeout(function(){ b.textContent='Copy address'; },2000);
+    };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(v).then(function(){done(true)},function(){done(false)});
+    } else done(false);
+  });
 })();
 </script>
 </body>
