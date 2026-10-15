@@ -4,14 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>João Pedro Pavia</title>
-<meta name="description" content="João Pedro Pavia, Assistant Professor at ISCTE-University Institute of Lisbon. Research on cybersecurity, wireless communication networks, artificial intelligence and big data.">
+<meta name="description" content="João Pedro Pavia, Assistant Professor at Iscte – University Institute of Lisbon. Research on cybersecurity, wireless communication networks, artificial intelligence and big data.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b6e8f'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='white' font-family='Georgia,serif'%3EJP%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0b6e8f">
 <link rel="canonical" href="https://jppavia.github.io/">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="João Pedro Pavia">
-<meta property="og:description" content="Assistant Professor at ISCTE-University Institute of Lisbon. Research on cybersecurity, wireless communication networks, artificial intelligence and big data.">
+<meta property="og:description" content="Assistant Professor at Iscte – University Institute of Lisbon. Research on cybersecurity, wireless communication networks, artificial intelligence and big data.">
 <meta property="og:url" content="https://jppavia.github.io/">
 <meta property="og:image" content="https://jppavia.github.io/profile.jpg">
+<meta property="og:image:alt" content="Portrait of João Pedro Pavia">
 <meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"João Pedro Pavia","jobTitle":"Assistant Professor","url":"https://jppavia.github.io/","image":"https://jppavia.github.io/profile.jpg","email":"mailto:Joao.Pedro.Pavia@iscte-iul.pt","worksFor":{"@type":"CollegeOrUniversity","name":"Iscte – University Institute of Lisbon","url":"https://www.iscte-iul.pt"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Iscte – University Institute of Lisbon"},"knowsAbout":["Cybersecurity","Wireless communication networks","Artificial intelligence","Big data"],"sameAs":["https://scholar.google.com/citations?user=OCoetOAAAAAJ","https://orcid.org/0000-0002-4759-4817","https://www.scopus.com/authid/detail.uri?authorId=57201579329","https://www.webofscience.com/wos/author/record/3523268","https://www.researchgate.net/profile/Joao-Pavia","https://www.cienciavitae.pt/en/4618-B076-34DF","https://ciencia.iscte-iul.pt/authors/joao-pedro-pavia","https://pt.linkedin.com/in/joaopedropavia"]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;1,400&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -28,7 +34,13 @@ body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 var(--sans)}
 a{color:var(--accent)}
 a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 header,main,footer{max-width:960px;margin:0 auto;padding:0 24px}
-header{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px;padding-top:28px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:var(--bg);padding:8px 14px;border-radius:6px;z-index:20}
+.skip:focus{left:8px}
+header{position:sticky;top:0;z-index:10;background:var(--bg);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px;padding-top:16px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+header strong a{color:inherit;text-decoration:none}
+nav a[aria-current]{color:var(--accent);font-weight:500}
 header strong{font:600 1.1rem var(--serif)}
 nav a{margin-left:20px;text-decoration:none;color:var(--muted);font-size:.95rem}
 nav a:hover{color:var(--accent)}
@@ -70,7 +82,12 @@ h3{font:600 1.15rem var(--serif);margin:0 0 4px}
 @media (max-width:720px){.entries li{grid-template-columns:1fr;gap:2px}}
 .links{list-style:none;margin:0 0 4px;padding:0;display:grid;gap:10px}
 .text h3 + .links{margin-top:12px}
-footer{padding-top:32px;padding-bottom:48px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:32px;padding-bottom:48px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+.grp{margin:32px 0 14px!important}
+.grp:first-child{margin-top:0!important}
+.simple{margin:0 0 1.1em;padding-left:1.2em;max-width:68ch;display:grid;gap:6px}
+.cols{columns:2 280px;column-gap:32px;display:block}
+.cols li{break-inside:avoid;margin-bottom:6px}
 @media (max-width:720px){
   .hero,section{grid-template-columns:1fr;gap:24px}
   .hero{padding-top:40px}
@@ -79,15 +96,26 @@ footer{padding-top:32px;padding-bottom:48px;border-top:1px solid var(--line);col
   nav::-webkit-scrollbar{display:none}
   nav a{margin:0 20px 0 0;flex:none}
 }
+@media print{
+  :root{--bg:#fff;--ink:#000;--muted:#333;--line:#bbb;--accent:#000}
+  header nav,.skip,.cta{display:none}
+  header{position:static}
+  body{font-size:11pt}
+  a{color:inherit;text-decoration:none}
+  section{padding:20px 0;break-inside:avoid-page}
+}
 </style>
 </head>
-<body>
+<body id="top">
+<a class="skip" href="#about">Skip to content</a>
 <header>
-  <strong>João Pedro Pavia</strong>
-  <nav>
+  <strong><a href="#top">João Pedro Pavia</a></strong>
+  <nav aria-label="Sections">
     <a href="#about">About</a>
+    <a href="#research">Research</a>
     <a href="#publications">Publications</a>
     <a href="#projects">Projects</a>
+    <a href="#teaching">Teaching</a>
     <a href="#experience">Experience</a>
     <a href="#education">Education</a>
     <a href="#awards">Awards</a>
@@ -98,10 +126,10 @@ footer{padding-top:32px;padding-bottom:48px;border-top:1px solid var(--line);col
 
 <main>
   <div class="hero">
-    <img src="profile.jpg" alt="Portrait of João Pedro Pavia">
+    <img src="profile.jpg" width="240" height="240" fetchpriority="high" alt="Portrait of João Pedro Pavia">
     <div>
       <h1>João Pedro Pavia</h1>
-      <p class="role">Assistant Professor in the Department of Digital Technologies, School of Applied Digital Technologies, ISCTE-University Institute of Lisbon, where he coordinates the Bachelor Degree in Digital Technologies and Information Security.</p>
+      <p class="role">Assistant Professor in the Department of Digital Technologies, School of Applied Digital Technologies, Iscte – University Institute of Lisbon, where he coordinates the Bachelor Degree in Digital Technologies and Information Security.</p>
       <ul class="tags">
         <li>Cybersecurity</li>
         <li>Wireless communication networks</li>
@@ -115,10 +143,22 @@ footer{padding-top:32px;padding-bottom:48px;border-top:1px solid var(--line);col
   <section id="about">
     <h2>A brief presentation</h2>
     <div class="text">
-      <p>João Pedro Calado Barradas Branco Pavia received his PhD in Information Science and Technology in 2022 and is currently Assistant Professor in the Department of Digital Technologies of the School of Applied Digital Technologies at ISCTE-University Institute of Lisbon, where he coordinates the Bachelor Degree in Digital Technologies and Information Security.</p>
+      <p>João Pedro Calado Barradas Branco Pavia received his PhD in Information Science and Technology in 2022 and is currently Assistant Professor in the Department of Digital Technologies of the School of Applied Digital Technologies at Iscte – University Institute of Lisbon, where he coordinates the Bachelor Degree in Digital Technologies and Information Security.</p>
       <p>He teaches courses related to computer networks, information security and artificial intelligence, at both the Lisbon and Sintra campuses.</p>
       <p>He is a member of IEEE and of COST (European Cooperation in Science and Technology), where he collaborates with professionals from several countries on intelligent radio communications for seamless inclusive interactions. Another of his collaborations concerns physical-layer security solutions for trustworthy and resilient 6G systems.</p>
       <p>He has been involved as local organizer and reviewer in several conferences and symposia, and is also a reviewer for several journals in information science and technology. His research interests are cybersecurity, wireless communication networks, artificial intelligence and big data.</p>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+    <div class="text">
+      <ul class="entries plain">
+        <li><strong>Wireless communication networks.</strong> Beyond-5G and 6G systems: massive and ultra-massive MIMO, hybrid precoding and reconfigurable intelligent surfaces (RIS) in the sub-6 GHz, mmWave and THz bands, plus physical-layer security.</li>
+        <li><strong>Cybersecurity.</strong> Automated vulnerability detection in web applications, penetration testing and intrusion detection for IoT, and the resilience of systems and networks.</li>
+        <li><strong>Artificial intelligence and big data.</strong> Machine learning for financial risk prediction and computer vision for industrial inspection.</li>
+        <li><strong>THz devices and sensing.</strong> Earlier work on frequency-selective surfaces, metamaterial filters and low-cost plasma detectors for imaging and structural health monitoring.</li>
+      </ul>
     </div>
   </section>
 
@@ -126,11 +166,11 @@ footer{padding-top:32px;padding-bottom:48px;border-top:1px solid var(--line);col
     <h2>Publications</h2>
     <div class="text">
       <p class="pubnote">The complete and up-to-date list is available on <a href="https://scholar.google.com/citations?user=OCoetOAAAAAJ">Google Scholar</a>.</p>
+            <h3 class="grp">Journal articles (15)</h3>
       <ol class="pubs" reversed>
-        <li><strong><a href="https://www.it.pt/Publications/DownloadPaperJournal/35098">Optimizing the Achievable Sum-Rate in OFDM-based Multi-User MIMO Systems Assisted by Beyond-Diagonal RISs</a></strong><br>D. Mendes, N. Souto, J. P. Pavia and J. Silva<br><em>IEEE Open Journal of the Communications Society, 2026</em></li>
+        <li><strong><a href="https://doi.org/10.1109/OJCOMS.2026.3666997">Optimizing the Achievable Sum-Rate in OFDM-based Multi-User MIMO Systems Assisted by Multiple Beyond-Diagonal RISs</a></strong><br>D. Mendes, N. Souto, J. P. Pavia and J. Silva<br><em>IEEE Open Journal of the Communications Society, 2026, 7, 1843–1860</em></li>
         <li><strong><a href="https://doi.org/10.1109/ACCESS.2026.3666761">Beamforming Optimization and System-level Assessment in RIS-aided MIMO Systems Comprising Hybrid Precoding Architectures</a></strong><br>D. Mendes, J. P. Pavia, N. Souto, J. Silva and A. Correia<br><em>IEEE Access, 2026, 14, 29333–29348</em></li>
-        <li><strong>Anticipating Financial Risk: Machine Learning for Debt Management in Telecommunications</strong><br>F. Arsénio, A. Raimundo and J. P. Pavia<br><em>IEEE Access, 2026</em></li>
-        <li><strong>Deep Learning Sensitivity Analysis for Computer Vision</strong><br>J. Matos-Carvalho, D. F. Fernandes, J. P. Pavia and S. D. Correia<br><em>Book chapter, Lecture Notes in Networks and Systems, 2026</em></li>
+        <li><strong><a href="https://doi.org/10.1109/ACCESS.2026.3665976">Anticipating Financial Risk: Machine Learning for Debt Management in Telecommunications</a></strong><br>F. Arsénio, A. Raimundo and J. P. Pavia<br><em>IEEE Access, 2026, 14, 29523–29538</em></li>
         <li><strong><a href="https://doi.org/10.3390/electronics14010079">Intelligent Platform for Automating Vulnerability Detection in Web Applications</a></strong><br>D. Moreira, J. P. Seara, J. P. Pavia and C. Serrão<br><em>Electronics (MDPI), 2025, 14(1), 79</em></li>
         <li><strong><a href="https://www.it.pt/Publications/PaperJournal/34092">System-level Assessment of Massive Multiple-Input-Multiple-Output and Reconfigurable Intelligent Surfaces in Centralized Radio Access Network and IoT scenarios in sub-6GHz, mm-Wave and THz bands</a></strong><br>J. P. Pavia, V. Velez, N. Souto, M. M. Silva and A. Correia<br><em>Applied Sciences, 2024</em></li>
         <li><strong><a href="https://www.it.pt/Publications/PaperJournal/33736">Performance Assessment of a RIS-empowered post-5G/6G network operating at the mmWave/THz bands</a></strong><br>V. Velez, J. P. Pavia, N. Souto, P. Sebastião and A. Correia<br><em>IEEE Access, 2023</em></li>
@@ -139,16 +179,23 @@ footer{padding-top:32px;padding-bottom:48px;border-top:1px solid var(--line);col
         <li><strong><a href="https://www.it.pt/Publications/PaperJournal/33011">System-level assessment of a C-RAN based on generalized space–frequency index modulation for 5G new radio and beyond</a></strong><br>V. Velez, J. P. Pavia, C. Rita, C. Gonçalves, N. Souto, P. Sebastião and A. Correia<br><em>Applied Sciences (MDPI), 2022, 12(3), 1592</em></li>
         <li><strong><a href="https://www.it.pt/Publications/PaperJournal/31931">Phase shift optimization algorithm for achievable rate maximization in reconfigurable intelligent surface-assisted THz communications</a></strong><br>J. Praia, J. P. Pavia, N. Souto and M. A. Ribeiro<br><em>Electronics (MDPI), 2022, 11(1), 18</em></li>
         <li><strong><a href="https://www.it.pt/Publications/PaperJournal/31697">Low Complexity Hybrid Precoding Designs for Multiuser mmWave/THz Ultra Massive MIMO Systems</a></strong><br>J. P. Pavia, V. Velez, R. Ferreira, N. Souto, M. A. Ribeiro, J. Silva and R. Dinis<br><em>Sensors (MDPI), 2021, 21(18), 6054</em></li>
-        <li><strong>Development of Stand-Off Imaging Systems using Low Cost Plasma Detectors that Work in the GHz to THz range</strong><br>D. Akbar, H. Altan, J. P. Pavia, M. A. Ribeiro, A. B. Sahin and C. K. Sarikaya<br><em>Terahertz (THz), Mid Infrared (MIR) and Near Infrared (NIR) Technologies for Protection of Critical Infrastructures Against Explosives and CBRN, ISSN 1874-6500, 2021</em></li>
-        <li><strong><a href="https://www.it.pt/Publications/PaperJournal/31684">A generalized space-frequency index modulation scheme for downlink MIMO transmissions with improved diversity</a></strong><br>V. Velez, J. P. Pavia, N. Souto, P. Sebastião and A. Correia<br><em>IEEE Access, 2020, 9, 118996</em></li>
+        <li><strong><a href="https://doi.org/10.1109/ACCESS.2021.3106547">A generalized space-frequency index modulation scheme for downlink MIMO transmissions with improved diversity</a></strong><br>V. Velez, J. P. Pavia, N. Souto, P. Sebastião and A. Correia<br><em>IEEE Access, 2021, 9, 118996–119009</em></li>
         <li><strong><a href="https://www.it.pt/Publications/PaperJournal/30153">Precoded Generalized Spatial Modulation for Downlink MIMO Transmissions in Beyond 5G Networks</a></strong><br>J. P. Pavia, V. Velez, B. Brogueira, N. Souto and A. Correia<br><em>Applied Sciences (MDPI), 2020, 10(18), 6617</em></li>
         <li><strong><a href="https://www.it.pt/Publications/PaperJournal/30074">Design of a reconfigurable THz filter based on metamaterial wire resonators with applications on sensor devices</a></strong><br>J. P. Pavia, N. Souto and M. A. Ribeiro<br><em>Photonics (MDPI), 2020, 7(3), 48</em></li>
-        <li><strong><a href="https://www.it.pt/Publications/PaperConference/36362">Precoder and Combiner Design for Generalized Spatial Modulation based Multiuser MIMO Systems</a></strong><br>B. Brogueira, J. P. Pavia, N. Souto and A. Correia<br><em>2020 23rd International Symposium on Wireless Personal Multimedia Communications (WPMC)</em></li>
-        <li><strong>Hybrid Precoding and Combining Algorithm for Reduced Complexity and Power Consumption Architectures in mmWave Communications</strong><br>J. P. Pavia, N. Souto, M. A. Ribeiro, J. Silva and R. Dinis<br><em>2020 IEEE 91st Vehicular Technology Conference (VTC2020-Spring)</em></li>
         <li><strong><a href="https://www.it.pt/Publications/PaperJournal/29507">An Alternating Direction Algorithm for Hybrid Precoding and Combining in Millimeter Wave MIMO Systems</a></strong><br>N. Souto, J. Silva, J. P. Pavia and M. A. Ribeiro<br><em>Physical Communication, Elsevier, ISSN 1874-4907, 2019</em></li>
-        <li><strong>Analysis of the Interaction between THz Waves and Low Cost Plasma Detectors for the Development of Stand-Off Imaging Systems</strong><br>J. P. Pavia, M. A. Ribeiro, C. K. Sarikaya, H. Altan, D. Akbar and N. Souto<br><em>7th IEEE MTT-S International Microwave &amp; RF Conference (IMaRC), 2019</em></li>
-        <li><strong>Application of a Mesh Free Monte-Carlo Method to the Analysis of Dielectric Slabs in Electromagnetics</strong><br>M. A. Ribeiro, J. P. Pavia and N. Souto<br><em>7th IEEE MTT-S International Microwave &amp; RF Conference (IMaRC), 2019</em></li>
-        <li><strong>Design of Frequency Selective Devices for the THz Domain with Applications on Structural Health Monitoring</strong><br>J. P. Pavia, N. Souto and M. A. Ribeiro<br><em>Metamaterials'2019, 13th International Congress on Artificial Materials for Novel Wave Phenomena, 2019</em></li>
+      </ol>
+      <h3 class="grp">Book chapters (2)</h3>
+      <ol class="pubs" reversed>
+        <li><strong><a href="https://doi.org/10.1007/978-3-032-23317-2_8">Deep Learning Sensitivity Analysis for Computer Vision</a></strong><br>J. Matos-Carvalho, D. F. Fernandes, J. P. Pavia and S. D. Correia<br><em>Book chapter, Lecture Notes in Networks and Systems, 2026, pp. 96–107</em></li>
+        <li><strong>Development of Stand-Off Imaging Systems using Low Cost Plasma Detectors that Work in the GHz to THz range</strong><br>D. Akbar, H. Altan, J. P. Pavia, M. A. Ribeiro, A. B. Sahin and C. K. Sarikaya<br><em>Terahertz (THz), Mid Infrared (MIR) and Near Infrared (NIR) Technologies for Protection of Critical Infrastructures Against Explosives and CBRN, ISSN 1874-6500, 2021</em></li>
+      </ol>
+      <h3 class="grp">Conference papers (11)</h3>
+      <ol class="pubs" reversed>
+        <li><strong><a href="https://www.it.pt/Publications/PaperConference/36362">Precoder and Combiner Design for Generalized Spatial Modulation based Multiuser MIMO Systems</a></strong><br>B. Brogueira, J. P. Pavia, N. Souto and A. Correia<br><em>2020 23rd International Symposium on Wireless Personal Multimedia Communications (WPMC)</em></li>
+        <li><strong><a href="https://doi.org/10.1109/VTC2020-Spring48590.2020.9128553">Hybrid Precoding and Combining Algorithm for Reduced Complexity and Power Consumption Architectures in mmWave Communications</a></strong><br>J. P. Pavia, N. Souto, M. A. Ribeiro, J. Silva and R. Dinis<br><em>2020 IEEE 91st Vehicular Technology Conference (VTC2020-Spring)</em></li>
+        <li><strong><a href="https://doi.org/10.1109/IMaRC45935.2019.9118777">Analysis of the Interaction between THz Waves and Low Cost Plasma Detectors for the Development of Stand-Off Imaging Systems</a></strong><br>J. P. Pavia, M. A. Ribeiro, C. K. Sarikaya, H. Altan, D. Akbar and N. Souto<br><em>7th IEEE MTT-S International Microwave &amp; RF Conference (IMaRC), 2019</em></li>
+        <li><strong><a href="https://doi.org/10.1109/IMaRC45935.2019.9118623">Application of a Mesh Free Monte-Carlo Method to the Analysis of Dielectric Slabs in Electromagnetics</a></strong><br>M. A. Ribeiro, J. P. Pavia and N. Souto<br><em>7th IEEE MTT-S International Microwave &amp; RF Conference (IMaRC), 2019</em></li>
+        <li><strong><a href="https://doi.org/10.1109/MetaMaterials.2019.8900930">Design of Frequency Selective Devices for the THz Domain with Applications on Structural Health Monitoring</a></strong><br>J. P. Pavia, N. Souto and M. A. Ribeiro<br><em>Metamaterials'2019, 13th International Congress on Artificial Materials for Novel Wave Phenomena, 2019</em></li>
         <li><strong><a href="https://www.it.pt/Publications/PaperConference/35035">Design of a Novel THz Sensor for Structural Health Monitoring Applications</a></strong><br>J. P. Pavia, M. A. Ribeiro, C. K. Sarikaya, D. Akbar, H. Altan and N. Souto<br><em>IEEE WAMICON 2019, 20th Annual IEEE Wireless and Microwave Technology Conference</em></li>
         <li><strong>Development of Stand-Off GHz Imaging Systems using Low Cost Plasma Detectors</strong><br>D. Akbar, H. Altan, J. P. Pavia, M. A. Ribeiro, C. K. Sarikaya and A. B. Sahin<br><em>Advanced Research Workshop (ARW): Terahertz (THz), Mid InfraRed (MIR) and Near InfraRed (NIR) Technologies for Protection of Critical Infrastructures against Explosives and CBRN, 2018</em></li>
         <li><strong><a href="https://www.it.pt/Publications/PaperConference/35028">Highly Selective Filter Design for the THz Domain using Frequency Selective Surfaces</a></strong><br>J. P. Pavia, N. Souto and M. A. Ribeiro<br><em>EIEC'18, XII Encuentro Ibérico de Electromagnetismo Computacional, 2018</em></li>
@@ -168,7 +215,81 @@ footer{padding-top:32px;padding-bottom:48px;border-top:1px solid var(--line);col
           <p>A partnership between Iscte and Bridgewater State University (USA) to strengthen scientific and pedagogical ties and to lay the groundwork for joint specializations, postgraduate programs and joint degrees in areas such as Cybersecurity, Artificial Intelligence and Language Technologies. It includes activities in a COIL environment throughout the academic year, reciprocal short-term stays for faculty and students, and joint research projects with an emphasis on Cybersecurity and Language Technologies. <a href="https://ciencia.iscte-iul.pt/authors/joao-pedro-pavia/projects">Project page</a></p></div></li>
         <li><span>Jan 2023 – Jan 2024</span><div><strong>REMARKABLE: Rural Environmental Monitoring via ultra wide-ARea networKs And distriButed federated Learning</strong>
           <em>Researcher · COPELABS, Universidade Lusófona · Horizon Europe MSCA Staff Exchanges 2021</em>
-          <p>EU-funded project on rural environmental monitoring using ultra wide-area networks and distributed federated learning. <a href="https://cordis.europa.eu/project/id/101086387">Project page on CORDIS</a></p></div></li>
+          <p>EU-funded project on rural environmental monitoring using ultra wide-area networks and distributed federated learning. <a href="https://cordis.europa.eu/project/id/101086387">Project page</a></p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="teaching">
+    <h2>Teaching &amp; Supervision</h2>
+    <div class="text">
+      <h3 class="grp">Courses taught</h3>
+      <p class="inst">Since 2023 at Iscte</p>
+      <ul class="simple cols">
+        <li>Introduction to Cybersecurity</li>
+        <li>Computer Network Security</li>
+        <li>Introduction to Computer Networks</li>
+        <li>Databases and Information Management</li>
+        <li>Databases and Security</li>
+        <li>Software and Application Security</li>
+        <li>Operating Systems and Virtualization</li>
+        <li>Computer Architecture</li>
+        <li>Distributed Systems and Security</li>
+        <li>Applied Project in Digital Technologies and Information Security I and II</li>
+        <li>Machine Learning for Cybersecurity</li>
+        <li>Systems Security and Resilience Verification</li>
+        <li>Business Resilience and Continuity</li>
+      </ul>
+      <p class="inst">Master's, postgraduate and executive education</p>
+      <ul class="simple">
+        <li>Security and Resilience of Communication Infrastructures and Networks (MSc and Postgraduate in Cybersecurity and Resilience)</li>
+        <li>Cybersecurity for Healthcare Systems (MSc in Digital Transformation Management in Healthcare)</li>
+        <li>Cybersecurity in School Context (MSc in Digital Transformation in Teaching and Learning)</li>
+        <li>Cybersecurity for Executives and Digital Technologies Applied to Society (training courses)</li>
+      </ul>
+
+      <h3 class="grp">Academic management</h3>
+      <ul class="entries">
+        <li><span>2025 – 2028</span><div>Director, BSc in Digital Technologies and Information Security</div></li>
+        <li><span>2024 – 2028</span><div>Member of the Pedagogical Committee</div></li>
+        <li><span>2025 – 2027</span><div>Member of the Plenary of the Pedagogical Council</div></li>
+      </ul>
+
+      <h3 class="grp">Supervision</h3>
+      <p class="inst">MSc dissertations in progress or submitted</p>
+      <ul class="simple">
+        <li>Design and Development of RIS-aided XL-MIMO Transmission and Reception Schemes</li>
+        <li>Deteção de Intrusão Híbrida Federada para IoT sob Condições Não-IID e Adversariais</li>
+        <li>APTIoT: Framework de Testes de Penetração Estandardizados para IoT (submitted)</li>
+        <li>Competências Digitais dos Profissionais de Saúde para a Implementação do Espaço Europeu de Dados de Saúde (EHDS)</li>
+        <li>EHR-Crawler: uma rede segura para saúde digital</li>
+        <li>Análise comparativa e otimização do desempenho de protocolos de roteamento dinâmico (OSPF, EIGRP e BGP) em cenários de conectividade complexa simulados</li>
+        <li>Optimizing data transmission between healthcare provider handovers</li>
+        <li>Avaliando a segurança de aplicações web de código aberto amplamente utilizadas na WWW</li>
+        <li>Planeamento de Redes Privadas 5G</li>
+        <li>Sistema inteligente de deteção de ataques</li>
+        <li>Otimização de Sistemas CUAS através da Visão Computacional e Inteligência Artificial</li>
+        <li>Análise de Conformidade de Políticas de Segurança de Informação de autenticação</li>
+        <li>Deteção e Mitigação de Ataques DDoS em Redes Peer-to-Peer</li>
+        <li>O impacto do advento da IA nos profissionais de cibersegurança</li>
+      </ul>
+      <p class="inst">MSc dissertations completed</p>
+      <ul class="simple">
+        <li>Antecipação de Risco Financeiro: Machine Learning para Gestão de Dívidas em Telecomunicações (2025)</li>
+        <li>Avaliação dos riscos de cibersegurança no sector financeiro: uma abordagem baseada na IA para a gestão de fornecedores e controlos de acessos (2025)</li>
+        <li>Sistema Online para um Follow-Up Eficiente na área da saúde (2025)</li>
+        <li>Plataforma Inteligente para a Automação da Deteção de Vulnerabilidades em Aplicações Web (2024)</li>
+      </ul>
+      <p class="inst">MSc applied projects in progress</p>
+      <ul class="simple">
+        <li>Plano de Segurança Informática em Contexto Escolar: Gestão de Riscos Digitais na era Moderna</li>
+        <li>Privacidade de Dados e Segurança de Informação em Ambientes Educativos com o Uso da Inteligência Artificial Generativa</li>
+      </ul>
+
+      <h3 class="grp">Academic service</h3>
+      <ul class="simple">
+        <li>Reviewer for several scientific journals, including those published by IEEE, Elsevier and Wiley (since 2022)</li>
+        <li>Member of IEEE (since 2014) and of COST – European Cooperation in Science and Technology (since 2022)</li>
       </ul>
     </div>
   </section>
@@ -178,7 +299,7 @@ footer{padding-top:32px;padding-bottom:48px;border-top:1px solid var(--line);col
     <div class="text">
       <ul class="entries exp">
         <li><span>Sep 2023 – present</span><div><strong>Assistant Professor</strong>
-          <em>ISCTE-Instituto Universitário de Lisboa</em>
+          <em>Iscte – University Institute of Lisbon</em>
           <p>Lecturing courses on computer networks, cybersecurity, distributed systems, database security and operating systems in the Department of Digital Technologies of the School of Applied Digital Technologies. Coordination of the Bachelor Degree in Digital Technologies and Information Security. Development of the computer networks and cybersecurity laboratories.</p></div></li>
         <li><span>Oct 2019 – present</span><div><strong>Researcher</strong>
           <em>Instituto de Telecomunicações</em>
@@ -205,7 +326,7 @@ footer{padding-top:32px;padding-bottom:48px;border-top:1px solid var(--line);col
           <em>IEEE ISCTE-IUL Student Branch</em>
           <p>Management of people and activities. The branch develops training activities for the community and carries out projects to promote the ISCTE-IUL School of Technologies and Architecture, fostering knowledge in computer science and telecommunications.</p></div></li>
         <li><span>Sep 2015 – Jul 2018</span><div><strong>Teaching Assistant</strong>
-          <em>ISCTE-Instituto Universitário de Lisboa</em>
+          <em>Iscte – University Institute of Lisbon</em>
           <p>Tutorial classes in Calculus II, Propagation and Radiation of Electromagnetic Waves, and Electromagnetism.</p></div></li>
         <li><span>Oct 2014 – Oct 2016</span><div><strong>Coordinator</strong>
           <em>IEEE ISCTE-IUL AcademicTV</em>
@@ -221,7 +342,7 @@ footer{padding-top:32px;padding-bottom:48px;border-top:1px solid var(--line);col
     <h2>Education &amp; Training</h2>
     <div class="text">
       <h3>Academic education</h3>
-      <p class="inst">ISCTE-University Institute of Lisbon</p>
+      <p class="inst">Iscte – University Institute of Lisbon</p>
       <ul class="entries">
         <li><span>2019 – 2022</span>Doctor of Philosophy (PhD), Information Science and Technology (specialization in Telecommunications and Networks)</li>
         <li><span>2016 – 2018</span>Master degree (MSc), Telecommunications and Computer Engineering</li>
@@ -243,13 +364,13 @@ footer{padding-top:32px;padding-bottom:48px;border-top:1px solid var(--line);col
     <div class="text">
       <ul class="entries awards">
         <li><span>2021</span><div><strong>PhD Student Merit Grant</strong><em>Fundação para a Ciência e a Tecnologia · 2 year contract</em></div></li>
-        <li><span>2019</span><div><strong>PhD Student Merit Grant</strong><em>ISCTE-University Institute of Lisbon · 1 year contract</em></div></li>
+        <li><span>2019</span><div><strong>PhD Student Merit Grant</strong><em>Iscte – University Institute of Lisbon · 1 year contract</em></div></li>
         <li><span>2019</span><div><strong>3rd Place of PhD Student Initiative at IMaRC Conference</strong><em>IEEE Microwave Theory and Techniques Society</em></div></li>
-        <li><span>2018</span><div><strong>ISTA Top Talent</strong><em>ISCTE-University Institute of Lisbon</em></div></li>
-        <li><span>2017</span><div><strong>ISTA Top Talent</strong><em>ISCTE-University Institute of Lisbon</em></div></li>
+        <li><span>2018</span><div><strong>ISTA Top Talent</strong><em>Iscte – University Institute of Lisbon</em></div></li>
+        <li><span>2017</span><div><strong>ISTA Top Talent</strong><em>Iscte – University Institute of Lisbon</em></div></li>
         <li><span>2017</span><div><strong>Exemplary Student Branch Award Winner</strong><em>IEEE Region 8 · Student Activities Exemplary Student Branch Awards</em></div></li>
         <li><span>2017</span><div><strong>3rd place in Ideas Contest of FISTA</strong><em>Forum of ISCTE-IUL School of Technology and Architecture (FISTA)</em></div></li>
-        <li><span>2016</span><div><strong>Certificate of Academic Excellence</strong><em>ISCTE-University Institute of Lisbon</em></div></li>
+        <li><span>2016</span><div><strong>Certificate of Academic Excellence</strong><em>Iscte – University Institute of Lisbon</em></div></li>
         <li><span>2015</span><div><strong>Exemplary Student Branch Award Winner</strong><em>IEEE Region 8 · Student Activities Exemplary Student Branch Awards</em></div></li>
       </ul>
     </div>
@@ -290,9 +411,28 @@ footer{padding-top:32px;padding-bottom:48px;border-top:1px solid var(--line);col
       <p><a href="mailto:Joao.Pedro.Pavia@iscte-iul.pt">Joao.Pedro.Pavia@iscte-iul.pt</a></p>
       <p><strong>Iscte Sintra</strong><br>Escola de Tecnologias Digitais, Economia e Sociedade<br>Av. Heliodoro Salgado 3, 2710-569 Sintra, Portugal</p>
       <p><strong>Iscte Lisboa</strong><br>Iscte – Instituto Universitário de Lisboa<br>Av. das Forças Armadas, 1649-026 Lisboa, Portugal</p>
-      <p><a href="https://pt.linkedin.com/in/joaopedropavia">LinkedIn</a></p>
+      <p>Let us connect on <a href="https://pt.linkedin.com/in/joaopedropavia">LinkedIn</a>.</p>
     </div>
   </section>
 </main>
+
+<footer>
+  <span>© 2026 João Pedro Pavia · Last updated October 2026</span>
+  <a href="#top">Back to top</a>
+</footer>
+
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('nav a'));
+  if(!('IntersectionObserver' in window)) return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      links.forEach(function(l){ l.getAttribute('href')==='#'+e.target.id ? l.setAttribute('aria-current','true') : l.removeAttribute('aria-current'); });
+    });
+  },{rootMargin:'-30% 0px -65% 0px'});
+  document.querySelectorAll('main section[id]').forEach(function(sec){ io.observe(sec); });
+})();
+</script>
 </body>
 </html>
