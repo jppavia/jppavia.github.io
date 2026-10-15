@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>João Pedro Pavia</title>
 <meta name="description" content="João Pedro Pavia, Assistant Professor at ISCTE-University Institute of Lisbon. Research on cybersecurity, wireless communication networks, artificial intelligence and big data.">
+<link rel="canonical" href="https://jppavia.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="João Pedro Pavia">
+<meta property="og:description" content="Assistant Professor at ISCTE-University Institute of Lisbon. Research on cybersecurity, wireless communication networks, artificial intelligence and big data.">
+<meta property="og:url" content="https://jppavia.github.io/">
+<meta property="og:image" content="https://jppavia.github.io/profile.jpg">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;1,400&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -44,13 +51,21 @@ h3{font:600 1.15rem var(--serif);margin:0 0 4px}
 .entries.exp li{grid-template-columns:150px 1fr}
 .entries.exp em{display:block;color:var(--muted)}
 .entries.exp p{margin:6px 0 0;font-size:.95rem}
+.pubnote{margin:0 0 24px;color:var(--muted)}
 .pubs{margin:0 0 24px;padding-left:2.2em;display:grid;gap:18px;max-width:68ch;font-size:.95rem}
 .pubs li::marker{color:var(--muted)}
 .pubs em{color:var(--muted)}
+.pubs strong{font-weight:500}
+.pubs strong a{color:inherit;text-decoration:underline;text-decoration-color:var(--line);text-decoration-thickness:1.5px;text-underline-offset:4px}
+.pubs strong a:hover{color:var(--accent);text-decoration-color:var(--accent)}
 .reasons{margin:0 0 1.1em;padding-left:1.2em}
 .entries.awards{gap:18px}
 .entries.awards li{grid-template-columns:70px 1fr}
 .entries.awards em{display:block;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 0}
+.cta a{border:1px solid var(--accent);border-radius:6px;padding:8px 18px;text-decoration:none;font-weight:500}
+.cta a:first-child{background:var(--accent);color:var(--bg)}
+.cta a:hover{opacity:.85}
 .entries.plain li{display:block;padding-left:16px;border-left:2px solid var(--line)}
 @media (max-width:720px){.entries li{grid-template-columns:1fr;gap:2px}}
 .links{list-style:none;margin:0 0 4px;padding:0;display:grid;gap:10px}
@@ -60,7 +75,9 @@ footer{padding-top:32px;padding-bottom:48px;border-top:1px solid var(--line);col
   .hero,section{grid-template-columns:1fr;gap:24px}
   .hero{padding-top:40px}
   .hero img{max-width:180px}
-  nav a{margin:0 16px 0 0}
+  nav{display:flex;width:100%;overflow-x:auto;white-space:nowrap;scrollbar-width:none;padding-bottom:4px}
+  nav::-webkit-scrollbar{display:none}
+  nav a{margin:0 20px 0 0;flex:none}
 }
 </style>
 </head>
@@ -69,10 +86,10 @@ footer{padding-top:32px;padding-bottom:48px;border-top:1px solid var(--line);col
   <strong>João Pedro Pavia</strong>
   <nav>
     <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
     <a href="#publications">Publications</a>
     <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
     <a href="#awards">Awards</a>
     <a href="#profiles">Profiles</a>
     <a href="#contacts">Contacts</a>
@@ -91,6 +108,7 @@ footer{padding-top:32px;padding-bottom:48px;border-top:1px solid var(--line);col
         <li>Artificial intelligence</li>
         <li>Big data</li>
       </ul>
+      <p class="cta"><a href="mailto:Joao.Pedro.Pavia@iscte-iul.pt">Email me</a><a href="https://ciencia.iscte-iul.pt/authors/joao-pedro-pavia/cv">Curriculum</a></p>
     </div>
   </div>
 
@@ -101,6 +119,57 @@ footer{padding-top:32px;padding-bottom:48px;border-top:1px solid var(--line);col
       <p>He teaches courses related to computer networks, information security and artificial intelligence, at both the Lisbon and Sintra campuses.</p>
       <p>He is a member of IEEE and of COST (European Cooperation in Science and Technology), where he collaborates with professionals from several countries on intelligent radio communications for seamless inclusive interactions. Another of his collaborations concerns physical-layer security solutions for trustworthy and resilient 6G systems.</p>
       <p>He has been involved as local organizer and reviewer in several conferences and symposia, and is also a reviewer for several journals in information science and technology. His research interests are cybersecurity, wireless communication networks, artificial intelligence and big data.</p>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <div class="text">
+      <p class="pubnote">The complete and up-to-date list is available on <a href="https://scholar.google.com/citations?user=OCoetOAAAAAJ">Google Scholar</a>.</p>
+      <ol class="pubs" reversed>
+        <li><strong><a href="https://www.it.pt/Publications/DownloadPaperJournal/35098">Optimizing the Achievable Sum-Rate in OFDM-based Multi-User MIMO Systems Assisted by Beyond-Diagonal RISs</a></strong><br>D. Mendes, N. Souto, J. P. Pavia and J. Silva<br><em>IEEE Open Journal of the Communications Society, 2026</em></li>
+        <li><strong><a href="https://doi.org/10.1109/ACCESS.2026.3666761">Beamforming Optimization and System-level Assessment in RIS-aided MIMO Systems Comprising Hybrid Precoding Architectures</a></strong><br>D. Mendes, J. P. Pavia, N. Souto, J. Silva and A. Correia<br><em>IEEE Access, 2026, 14, 29333–29348</em></li>
+        <li><strong>Anticipating Financial Risk: Machine Learning for Debt Management in Telecommunications</strong><br>F. Arsénio, A. Raimundo and J. P. Pavia<br><em>IEEE Access, 2026</em></li>
+        <li><strong>Deep Learning Sensitivity Analysis for Computer Vision</strong><br>J. Matos-Carvalho, D. F. Fernandes, J. P. Pavia and S. D. Correia<br><em>Book chapter, Lecture Notes in Networks and Systems, 2026</em></li>
+        <li><strong><a href="https://doi.org/10.3390/electronics14010079">Intelligent Platform for Automating Vulnerability Detection in Web Applications</a></strong><br>D. Moreira, J. P. Seara, J. P. Pavia and C. Serrão<br><em>Electronics (MDPI), 2025, 14(1), 79</em></li>
+        <li><strong><a href="https://www.it.pt/Publications/PaperJournal/34092">System-level Assessment of Massive Multiple-Input-Multiple-Output and Reconfigurable Intelligent Surfaces in Centralized Radio Access Network and IoT scenarios in sub-6GHz, mm-Wave and THz bands</a></strong><br>J. P. Pavia, V. Velez, N. Souto, M. M. Silva and A. Correia<br><em>Applied Sciences, 2024</em></li>
+        <li><strong><a href="https://www.it.pt/Publications/PaperJournal/33736">Performance Assessment of a RIS-empowered post-5G/6G network operating at the mmWave/THz bands</a></strong><br>V. Velez, J. P. Pavia, N. Souto, P. Sebastião and A. Correia<br><em>IEEE Access, 2023</em></li>
+        <li><strong><a href="https://www.it.pt/Publications/PaperJournal/33744">YOLOX-Ray: An Efficient Attention-Based Single-Staged Object Detector Tailored for Industrial Inspections</a></strong><br>A. Raimundo, J. P. Pavia, P. Sebastião and O. Postolache<br><em>Sensors (MDPI), 2023, 23(10), 4681</em></li>
+        <li><strong><a href="https://www.it.pt/Publications/PaperJournal/31912">System-level assessment of low complexity hybrid precoding designs for massive MIMO downlink transmissions in beyond 5G networks</a></strong><br>J. P. Pavia, V. Velez, N. Souto, M. A. Ribeiro, P. Sebastião and A. Correia<br><em>Applied Sciences (MDPI), 2022, 12(6), 2812</em></li>
+        <li><strong><a href="https://www.it.pt/Publications/PaperJournal/33011">System-level assessment of a C-RAN based on generalized space–frequency index modulation for 5G new radio and beyond</a></strong><br>V. Velez, J. P. Pavia, C. Rita, C. Gonçalves, N. Souto, P. Sebastião and A. Correia<br><em>Applied Sciences (MDPI), 2022, 12(3), 1592</em></li>
+        <li><strong><a href="https://www.it.pt/Publications/PaperJournal/31931">Phase shift optimization algorithm for achievable rate maximization in reconfigurable intelligent surface-assisted THz communications</a></strong><br>J. Praia, J. P. Pavia, N. Souto and M. A. Ribeiro<br><em>Electronics (MDPI), 2022, 11(1), 18</em></li>
+        <li><strong><a href="https://www.it.pt/Publications/PaperJournal/31697">Low Complexity Hybrid Precoding Designs for Multiuser mmWave/THz Ultra Massive MIMO Systems</a></strong><br>J. P. Pavia, V. Velez, R. Ferreira, N. Souto, M. A. Ribeiro, J. Silva and R. Dinis<br><em>Sensors (MDPI), 2021, 21(18), 6054</em></li>
+        <li><strong>Development of Stand-Off Imaging Systems using Low Cost Plasma Detectors that Work in the GHz to THz range</strong><br>D. Akbar, H. Altan, J. P. Pavia, M. A. Ribeiro, A. B. Sahin and C. K. Sarikaya<br><em>Terahertz (THz), Mid Infrared (MIR) and Near Infrared (NIR) Technologies for Protection of Critical Infrastructures Against Explosives and CBRN, ISSN 1874-6500, 2021</em></li>
+        <li><strong><a href="https://www.it.pt/Publications/PaperJournal/31684">A generalized space-frequency index modulation scheme for downlink MIMO transmissions with improved diversity</a></strong><br>V. Velez, J. P. Pavia, N. Souto, P. Sebastião and A. Correia<br><em>IEEE Access, 2020, 9, 118996</em></li>
+        <li><strong><a href="https://www.it.pt/Publications/PaperJournal/30153">Precoded Generalized Spatial Modulation for Downlink MIMO Transmissions in Beyond 5G Networks</a></strong><br>J. P. Pavia, V. Velez, B. Brogueira, N. Souto and A. Correia<br><em>Applied Sciences (MDPI), 2020, 10(18), 6617</em></li>
+        <li><strong><a href="https://www.it.pt/Publications/PaperJournal/30074">Design of a reconfigurable THz filter based on metamaterial wire resonators with applications on sensor devices</a></strong><br>J. P. Pavia, N. Souto and M. A. Ribeiro<br><em>Photonics (MDPI), 2020, 7(3), 48</em></li>
+        <li><strong><a href="https://www.it.pt/Publications/PaperConference/36362">Precoder and Combiner Design for Generalized Spatial Modulation based Multiuser MIMO Systems</a></strong><br>B. Brogueira, J. P. Pavia, N. Souto and A. Correia<br><em>2020 23rd International Symposium on Wireless Personal Multimedia Communications (WPMC)</em></li>
+        <li><strong>Hybrid Precoding and Combining Algorithm for Reduced Complexity and Power Consumption Architectures in mmWave Communications</strong><br>J. P. Pavia, N. Souto, M. A. Ribeiro, J. Silva and R. Dinis<br><em>2020 IEEE 91st Vehicular Technology Conference (VTC2020-Spring)</em></li>
+        <li><strong><a href="https://www.it.pt/Publications/PaperJournal/29507">An Alternating Direction Algorithm for Hybrid Precoding and Combining in Millimeter Wave MIMO Systems</a></strong><br>N. Souto, J. Silva, J. P. Pavia and M. A. Ribeiro<br><em>Physical Communication, Elsevier, ISSN 1874-4907, 2019</em></li>
+        <li><strong>Analysis of the Interaction between THz Waves and Low Cost Plasma Detectors for the Development of Stand-Off Imaging Systems</strong><br>J. P. Pavia, M. A. Ribeiro, C. K. Sarikaya, H. Altan, D. Akbar and N. Souto<br><em>7th IEEE MTT-S International Microwave &amp; RF Conference (IMaRC), 2019</em></li>
+        <li><strong>Application of a Mesh Free Monte-Carlo Method to the Analysis of Dielectric Slabs in Electromagnetics</strong><br>M. A. Ribeiro, J. P. Pavia and N. Souto<br><em>7th IEEE MTT-S International Microwave &amp; RF Conference (IMaRC), 2019</em></li>
+        <li><strong>Design of Frequency Selective Devices for the THz Domain with Applications on Structural Health Monitoring</strong><br>J. P. Pavia, N. Souto and M. A. Ribeiro<br><em>Metamaterials'2019, 13th International Congress on Artificial Materials for Novel Wave Phenomena, 2019</em></li>
+        <li><strong><a href="https://www.it.pt/Publications/PaperConference/35035">Design of a Novel THz Sensor for Structural Health Monitoring Applications</a></strong><br>J. P. Pavia, M. A. Ribeiro, C. K. Sarikaya, D. Akbar, H. Altan and N. Souto<br><em>IEEE WAMICON 2019, 20th Annual IEEE Wireless and Microwave Technology Conference</em></li>
+        <li><strong>Development of Stand-Off GHz Imaging Systems using Low Cost Plasma Detectors</strong><br>D. Akbar, H. Altan, J. P. Pavia, M. A. Ribeiro, C. K. Sarikaya and A. B. Sahin<br><em>Advanced Research Workshop (ARW): Terahertz (THz), Mid InfraRed (MIR) and Near InfraRed (NIR) Technologies for Protection of Critical Infrastructures against Explosives and CBRN, 2018</em></li>
+        <li><strong><a href="https://www.it.pt/Publications/PaperConference/35028">Highly Selective Filter Design for the THz Domain using Frequency Selective Surfaces</a></strong><br>J. P. Pavia, N. Souto and M. A. Ribeiro<br><em>EIEC'18, XII Encuentro Ibérico de Electromagnetismo Computacional, 2018</em></li>
+        <li><strong><a href="https://www.it.pt/Publications/PaperConference/35026">The Evolution and Future Perspective of Security in Mobile Communications Networks</a></strong><br>J. P. Pavia, D. A. Lopes, P. M. Cristóvão, P. Sebastião and A. Correia<br><em>ICUMT 2017, 9th International Congress on Ultra Modern Telecommunications and Control Systems, 2017</em></li>
+        <li><strong><a href="https://www.it.pt/Publications/PaperConference/35027">Design of a THz-MEMS Frequency Selective Surface for Structural Health Monitoring</a></strong><br>J. P. Pavia, W. J. Otter, S. Lucyszyn and M. A. Ribeiro<br><em>META'16, 7th International Conference on Metamaterials, Photonic Crystals and Plasmonics, 2016</em></li>
+        <li><strong>Design of Low Cost Frequency Selective Structures with Extremely Small Bandwidth</strong><br>J. P. Pavia, F. R. Prudêncio and M. A. Ribeiro<br><em>International Conference on Semiconductor Mid-IR and THz Materials and Optics (SMMO 2016), 2016</em></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="text">
+      <ul class="entries exp">
+        <li><span>Oct 2024 – Dec 2025</span><div><strong>Atlantic Crossing: Crossing the Atlantic for Scientific and Teaching-Learning Cooperation</strong>
+          <em>Researcher · ISTAR-Iscte · funded by FLAD (Luso-American Development Foundation)</em>
+          <p>A partnership between Iscte and Bridgewater State University (USA) to strengthen scientific and pedagogical ties and to lay the groundwork for joint specializations, postgraduate programs and joint degrees in areas such as Cybersecurity, Artificial Intelligence and Language Technologies. It includes activities in a COIL environment throughout the academic year, reciprocal short-term stays for faculty and students, and joint research projects with an emphasis on Cybersecurity and Language Technologies. <a href="https://ciencia.iscte-iul.pt/authors/joao-pedro-pavia/projects">Project page</a></p></div></li>
+        <li><span>Jan 2023 – Jan 2024</span><div><strong>REMARKABLE: Rural Environmental Monitoring via ultra wide-ARea networKs And distriButed federated Learning</strong>
+          <em>Researcher · COPELABS, Universidade Lusófona · Horizon Europe MSCA Staff Exchanges 2021</em>
+          <p>EU-funded project on rural environmental monitoring using ultra wide-area networks and distributed federated learning. <a href="https://cordis.europa.eu/project/id/101086387">Project page on CORDIS</a></p></div></li>
+      </ul>
     </div>
   </section>
 
@@ -169,58 +238,7 @@ footer{padding-top:32px;padding-bottom:48px;border-top:1px solid var(--line);col
     </div>
   </section>
 
-  <section id="publications">
-    <h2>Publications</h2>
-    <div class="text">
-      <ol class="pubs" reversed>
-        <li><strong>Optimizing the Achievable Sum-Rate in OFDM-based Multi-User MIMO Systems Assisted by Beyond-Diagonal RISs</strong><br>D. Mendes, N. Souto, J. P. Pavia and J. Silva<br><em>IEEE Open Journal of the Communications Society, 2026</em></li>
-        <li><strong>Beamforming Optimization and System-level Assessment in RIS-aided MIMO Systems Comprising Hybrid Precoding Architectures</strong><br>D. Mendes, J. P. Pavia, N. Souto, J. Silva and A. Correia<br><em>IEEE Access, 2026</em></li>
-        <li><strong>Anticipating Financial Risk: Machine Learning for Debt Management in Telecommunications</strong><br>F. Arsénio, A. Raimundo and J. P. Pavia<br><em>IEEE Access, 2026</em></li>
-        <li><strong>Deep Learning Sensitivity Analysis for Computer Vision</strong><br>J. Matos-Carvalho, D. F. Fernandes, J. P. Pavia and S. D. Correia<br><em>Book chapter, Lecture Notes in Networks and Systems, 2026</em></li>
-        <li><strong>Intelligent Platform for Automating Vulnerability Detection in Web Applications</strong><br>D. Moreira, J. P. Pavia and C. Serrão<br><em>Electronics, 2025</em></li>
-        <li><strong>System-level Assessment of Massive Multiple-Input-Multiple-Output and Reconfigurable Intelligent Surfaces in Centralized Radio Access Network and IoT scenarios in sub-6GHz, mm-Wave and THz bands</strong><br>J. P. Pavia, V. Velez, N. Souto, M. M. Silva and A. Correia<br><em>Applied Sciences, 2024</em></li>
-        <li><strong>Performance Assessment of a RIS-empowered post-5G/6G network operating at the mmWave/THz bands</strong><br>V. Velez, J. P. Pavia, N. Souto, P. Sebastião and A. Correia<br><em>IEEE Access, 2023</em></li>
-        <li><strong>YOLOX-Ray: An Efficient Attention-Based Single-Staged Object Detector Tailored for Industrial Inspections</strong><br>A. Raimundo, J. P. Pavia, P. Sebastião and O. Postolache<br><em>Sensors (MDPI), 2023, 23(10), 4681</em></li>
-        <li><strong>System-level assessment of low complexity hybrid precoding designs for massive MIMO downlink transmissions in beyond 5G networks</strong><br>J. P. Pavia, V. Velez, N. Souto, M. A. Ribeiro, P. Sebastião and A. Correia<br><em>Applied Sciences (MDPI), 2022, 12(6), 2812</em></li>
-        <li><strong>System-level assessment of a C-RAN based on generalized space–frequency index modulation for 5G new radio and beyond</strong><br>V. Velez, J. P. Pavia, C. Rita, C. Gonçalves, N. Souto, P. Sebastião and A. Correia<br><em>Applied Sciences (MDPI), 2022, 12(3), 1592</em></li>
-        <li><strong>Phase shift optimization algorithm for achievable rate maximization in reconfigurable intelligent surface-assisted THz communications</strong><br>J. Praia, J. P. Pavia, N. Souto and M. A. Ribeiro<br><em>Electronics (MDPI), 2022, 11(1), 18</em></li>
-        <li><strong>Low Complexity Hybrid Precoding Designs for Multiuser mmWave/THz Ultra Massive MIMO Systems</strong><br>J. P. Pavia, V. Velez, R. Ferreira, N. Souto, M. A. Ribeiro, J. Silva and R. Dinis<br><em>Sensors (MDPI), 2021, 21(18), 6054</em></li>
-        <li><strong>Development of Stand-Off Imaging Systems using Low Cost Plasma Detectors that Work in the GHz to THz range</strong><br>D. Akbar, H. Altan, J. P. Pavia, M. A. Ribeiro, A. B. Sahin and C. K. Sarikaya<br><em>Terahertz (THz), Mid Infrared (MIR) and Near Infrared (NIR) Technologies for Protection of Critical Infrastructures Against Explosives and CBRN, ISSN 1874-6500, 2021</em></li>
-        <li><strong>A generalized space-frequency index modulation scheme for downlink MIMO transmissions with improved diversity</strong><br>V. Velez, J. P. Pavia, N. Souto, P. Sebastião and A. Correia<br><em>IEEE Access, 2020, 9, 118996</em></li>
-        <li><strong>Precoded Generalized Spatial Modulation for Downlink MIMO Transmissions in Beyond 5G Networks</strong><br>J. P. Pavia, V. Velez, B. Brogueira, N. Souto and A. Correia<br><em>Applied Sciences (MDPI), 2020, 10(18), 6617</em></li>
-        <li><strong>Design of a reconfigurable THz filter based on metamaterial wire resonators with applications on sensor devices</strong><br>J. P. Pavia, N. Souto and M. A. Ribeiro<br><em>Photonics (MDPI), 2020, 7(3), 48</em></li>
-        <li><strong>Precoder and Combiner Design for Generalized Spatial Modulation based Multiuser MIMO Systems</strong><br>B. Brogueira, J. P. Pavia, N. Souto and A. Correia<br><em>2020 23rd International Symposium on Wireless Personal Multimedia Communications (WPMC)</em></li>
-        <li><strong>Hybrid Precoding and Combining Algorithm for Reduced Complexity and Power Consumption Architectures in mmWave Communications</strong><br>J. P. Pavia, N. Souto, M. A. Ribeiro, J. Silva and R. Dinis<br><em>2020 IEEE 91st Vehicular Technology Conference (VTC2020-Spring)</em></li>
-        <li><strong>An Alternating Direction Algorithm for Hybrid Precoding and Combining in Millimeter Wave MIMO Systems</strong><br>N. Souto, J. Silva, J. P. Pavia and M. A. Ribeiro<br><em>Physical Communication, Elsevier, ISSN 1874-4907, 2019</em></li>
-        <li><strong>Analysis of the Interaction between THz Waves and Low Cost Plasma Detectors for the Development of Stand-Off Imaging Systems</strong><br>J. P. Pavia, M. A. Ribeiro, C. K. Sarikaya, H. Altan, D. Akbar and N. Souto<br><em>7th IEEE MTT-S International Microwave &amp; RF Conference (IMaRC), 2019</em></li>
-        <li><strong>Application of a Mesh Free Monte-Carlo Method to the Analysis of Dielectric Slabs in Electromagnetics</strong><br>M. A. Ribeiro, J. P. Pavia and N. Souto<br><em>7th IEEE MTT-S International Microwave &amp; RF Conference (IMaRC), 2019</em></li>
-        <li><strong>Design of Frequency Selective Devices for the THz Domain with Applications on Structural Health Monitoring</strong><br>J. P. Pavia, N. Souto and M. A. Ribeiro<br><em>Metamaterials'2019, 13th International Congress on Artificial Materials for Novel Wave Phenomena, 2019</em></li>
-        <li><strong>Design of a Novel THz Sensor for Structural Health Monitoring Applications</strong><br>J. P. Pavia, M. A. Ribeiro, C. K. Sarikaya, D. Akbar, H. Altan and N. Souto<br><em>IEEE WAMICON 2019, 20th Annual IEEE Wireless and Microwave Technology Conference</em></li>
-        <li><strong>Development of Stand-Off GHz Imaging Systems using Low Cost Plasma Detectors</strong><br>D. Akbar, H. Altan, J. P. Pavia, M. A. Ribeiro, C. K. Sarikaya and A. B. Sahin<br><em>Advanced Research Workshop (ARW): Terahertz (THz), Mid InfraRed (MIR) and Near InfraRed (NIR) Technologies for Protection of Critical Infrastructures against Explosives and CBRN, 2018</em></li>
-        <li><strong>Highly Selective Filter Design for the THz Domain using Frequency Selective Surfaces</strong><br>J. P. Pavia, N. Souto and M. A. Ribeiro<br><em>EIEC'18, XII Encuentro Ibérico de Electromagnetismo Computacional, 2018</em></li>
-        <li><strong>The Evolution and Future Perspective of Security in Mobile Communications Networks</strong><br>J. P. Pavia, D. A. Lopes, P. M. Cristóvão, P. Sebastião and A. Correia<br><em>ICUMT 2017, 9th International Congress on Ultra Modern Telecommunications and Control Systems, 2017</em></li>
-        <li><strong>Design of a THz-MEMS Frequency Selective Surface for Structural Health Monitoring</strong><br>J. P. Pavia, W. J. Otter, S. Lucyszyn and M. A. Ribeiro<br><em>META'16, 7th International Conference on Metamaterials, Photonic Crystals and Plasmonics, 2016</em></li>
-        <li><strong>Design of Low Cost Frequency Selective Structures with Extremely Small Bandwidth</strong><br>J. P. Pavia, F. R. Prudêncio and M. A. Ribeiro<br><em>International Conference on Semiconductor Mid-IR and THz Materials and Optics (SMMO 2016), 2016</em></li>
-      </ol>
-      <p><a href="https://orcid.org/0000-0002-4759-4817">Full list on ORCID</a> · <a href="https://scholar.google.com/citations?user=OCoetOAAAAAJ">Google Scholar</a></p>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="text">
-      <ul class="entries exp">
-        <li><span>Oct 2024 – Dec 2025</span><div><strong>Atlantic Crossing: Crossing the Atlantic for Scientific and Teaching-Learning Cooperation</strong>
-          <em>Researcher · ISTAR-Iscte · funded by FLAD (Luso-American Development Foundation)</em>
-          <p>A partnership between Iscte and Bridgewater State University (USA) to strengthen scientific and pedagogical ties and to lay the groundwork for joint specializations, postgraduate programs and joint degrees in areas such as Cybersecurity, Artificial Intelligence and Language Technologies. It includes activities in a COIL environment throughout the academic year, reciprocal short-term stays for faculty and students, and joint research projects with an emphasis on Cybersecurity and Language Technologies. <a href="https://ciencia.iscte-iul.pt/authors/joao-pedro-pavia/projects">Project page</a></p></div></li>
-        <li><span>Jan 2023 – Jan 2024</span><div><strong>REMARKABLE: Rural Environmental Monitoring via ultra wide-ARea networKs And distriButed federated Learning</strong>
-          <em>Researcher · COPELABS, Universidade Lusófona · Horizon Europe MSCA Staff Exchanges 2021</em>
-          <p>EU-funded project on rural environmental monitoring using ultra wide-area networks and distributed federated learning. <a href="https://cordis.europa.eu/project/id/101086387">Project page on CORDIS</a></p></div></li>
-      </ul>
-    </div>
-  </section>
-
-      <section id="awards">
+  <section id="awards">
     <h2>Honors &amp; Awards</h2>
     <div class="text">
       <ul class="entries awards">
@@ -276,8 +294,5 @@ footer{padding-top:32px;padding-bottom:48px;border-top:1px solid var(--line);col
     </div>
   </section>
 </main>
-
-<footer>
-</footer>
 </body>
 </html>
